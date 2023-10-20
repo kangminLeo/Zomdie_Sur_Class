@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 8f2cb10910a21694cb8f82696664f330
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - fire_Transform: {instanceID: 0}
+  - lineRenderer: {instanceID: 0}
+  - data: {fileID: 11400000, guid: 99f20da7c81ef784785e435be5e9548c, type: 2}
+  - shot_Effect: {instanceID: 0}
+  - shell_Effect: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
