@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-
 public class ZombieController : LivingEntity
 {
     [Header("추적할 대상 레이어")]
-    public LayerMask TargetLayer;
+    public LayerMask TargetLayer; // 타겟 레이어
     private LivingEntity TargetEntity;
 
     // 경로를 계산할 AI Agent
@@ -20,13 +19,14 @@ public class ZombieController : LivingEntity
 
     private Animator Zombie_ani;
     private AudioSource Zombie_audio;
-
+    private Renderer Zombie_renderer;
+        
     /**/
 
     [Header("Info")]
-    [SerializeField] private float Damage = 20f;
-    [SerializeField] private float TimebetAttack = 0.5f;
-    private float LastAttackTimebet;
+    [SerializeField] private float Damage = 20f; // 
+    [SerializeField] private float TimebetAttack = 0.5f; // 
+    private float LastAttackTimebet; // 
     
     private bool isTarget
     {
@@ -45,6 +45,31 @@ public class ZombieController : LivingEntity
         TryGetComponent(out agent);
         TryGetComponent(out Zombie_ani);
         TryGetComponent(out Zombie_audio);
+
+
+        /*
+            GetComponentInChildren->
+            특정 컴포넌트의 하위 객체(자식) 중에 가장 선두에 있는 컴포넌트를 반환
+
+
+         */
+        Debug.Log("1");
+
+        if (Zombie_renderer != null) // message
+            Zombie_renderer.GetComponentInChildren<Renderer>();
+
+        Debug.Log("2");
+    }
+
+    public void Setup(ZombieData data)
+    {
+        StartHealth = data.Health;
+        Damage = data.Damage;
+
+        agent.speed = data.Speed;
+
+        if (Zombie_renderer != null)
+            Zombie_renderer.material.color = data.Skincolor;
     }
 
     public override void OnDamage(float Damage, Vector3 hitPosition, Vector3 hitNormal)
@@ -161,4 +186,3 @@ public class ZombieController : LivingEntity
         }
     }
 }
-

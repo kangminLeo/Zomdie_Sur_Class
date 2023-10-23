@@ -20,6 +20,14 @@ public class PlayerInput : MonoBehaviour
 
     private void Update()
     {
+        if(GameManager.Instance != null && GameManager.Instance.isGameOver)
+        {
+            Move_Value = 0;
+            Rotate_Value = 0;
+            isFire = false;
+            isReload = false;
+            return;
+        }
         //미래에게... 게임over를 만든다면 못 움직도록 선언해 주세요....
 
         Move_Value = Input.GetAxis(MoveAxis_name);
