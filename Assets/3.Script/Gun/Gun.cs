@@ -106,11 +106,6 @@ public class Gun : MonoBehaviour
             {
                 target.OnDamage(data.Damage, hit.point, hit.normal);
             }
-            
-            //if(hit.collider.TryGetComponent(out IDamage damage))
-            //{
-            //    target.OnDamage(data.Damage, hit.point, hit.normal);
-            //}
 
             hitPosition = hit.point;
         }
@@ -183,6 +178,9 @@ public class Gun : MonoBehaviour
         // 탄창을 채우고 전체 탄창의 수를 줄인다.
         magAmmo += ammofill;
         ammoRemain -= ammofill;
+
+        
+
         state = State.Ready;
     }
 }

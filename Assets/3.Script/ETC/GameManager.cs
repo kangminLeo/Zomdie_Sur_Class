@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     // 싱글톤 _ 형태 2
-    private static GameManager instance = null; // 캡슐화
+    private static GameManager instance; // 캡슐화
     public static GameManager Instance // 싱글톤
     {
         get
@@ -14,14 +14,14 @@ public class GameManager : MonoBehaviour
             {
                 instance = FindObjectOfType<GameManager>(); // 인스턴스는 GameManager 타입의 오브젝트를 찾는다.
             }
-            return instance;
+            return instance; // 인스턴스 리턴
         }
     }
     private void Awake()
     {
         if(Instance == null)
         {
-            Destroy(gameObject);
+            Destroy(gameObject); 
         }
     }
 

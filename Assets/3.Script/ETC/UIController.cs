@@ -52,7 +52,7 @@ public class UIController : MonoBehaviour
     {
         // Wave : 0
         // Zombie
-        // Wave_Text.text = string.Format("Wave : {0}\nZombie Left : {1}", Wave, Count);
+         Wave_Text.text = string.Format("Wave : {0}\nZombie Left : {1}", Wave, Count); // message
     }
     public void SetActive_Gameover(bool isAct)
     {
@@ -61,6 +61,7 @@ public class UIController : MonoBehaviour
 
     public void GameRestart()
     {
+        SetActive_Gameover(false);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

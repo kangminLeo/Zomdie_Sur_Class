@@ -47,11 +47,14 @@ public class ZombieSpawner : MonoBehaviour
             // 웨이브 늘리는 메소드 넣어주세요
         }
         // UI update
+        
         UpdateUI();
     }
     private void UpdateUI()
     {
         UIController.instance.Update_WaveText(Wave, zombieList.Count);
+        Debug.Log(zombieList.Count);
+        //Debug.Log(Wave);
     }
 
     private void SpawnWave()

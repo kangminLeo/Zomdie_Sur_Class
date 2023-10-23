@@ -55,8 +55,8 @@ public class ZombieController : LivingEntity
          */
         Debug.Log("1");
 
-        if (Zombie_renderer != null) // message
-            Zombie_renderer.GetComponentInChildren<Renderer>();
+        //if (Zombie_renderer != null) // message
+            Zombie_renderer = GetComponentInChildren<Renderer>(); 
 
         Debug.Log("2");
     }
@@ -68,7 +68,7 @@ public class ZombieController : LivingEntity
 
         agent.speed = data.Speed;
 
-        if (Zombie_renderer != null)
+        //if (Zombie_renderer != null) // message
             Zombie_renderer.material.color = data.Skincolor;
     }
 
@@ -152,8 +152,6 @@ public class ZombieController : LivingEntity
         Zombie_ani.SetBool("HasTarget", isTarget);
     }
 
-
-
     private IEnumerator Update_TargetPosition()
     {
         while(!isDead)
@@ -181,7 +179,6 @@ public class ZombieController : LivingEntity
                 }
             }
             yield return null; // 한 프레임씩
-
 
         }
     }

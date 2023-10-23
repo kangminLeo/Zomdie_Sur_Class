@@ -277,7 +277,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 471844516}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.83, y: 0.63, z: -11.68}
+  m_LocalPosition: {x: -1.83, y: 0, z: -11.68}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1262726023}
@@ -738,7 +738,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 80e6db14eb2874746a49eb9783dea3bb, type: 2}
   - {fileID: 11400000, guid: 409c42a2f32d8404f9cf8578274eb2b4, type: 2}
   - {fileID: 11400000, guid: 57251cdcf335d67409ec04167007097d, type: 2}
-  zombie: {fileID: 8492678707769676703, guid: 5fac3e7c6ad38b64f9f65666e6a0b5eb, type: 3}
+  zombie: {fileID: 5932047165066431182, guid: 5fac3e7c6ad38b64f9f65666e6a0b5eb, type: 3}
   spawnPoint: []
 --- !u!1 &1448390458
 GameObject:
@@ -1063,8 +1063,8 @@ MonoBehaviour:
   GunPivot: {fileID: 1106440771}
   LeftHand_mount: {fileID: 4355250397502571}
   RightHand_mount: {fileID: 4789897435966861}
-  animator: {fileID: 1615011044}
-  input: {fileID: 1624403751}
+  animator: {fileID: 0}
+  input: {fileID: 0}
 --- !u!114 &1624403754
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1634,22 +1634,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &2068428648
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1144028363471556}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af217280e199de44d96c59839783a8d7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AmmoText: {fileID: 114981676060412874}
-  ScoreText: {fileID: 114010142600299370}
-  Wave_Text: {fileID: 114843941873921576}
-  Gameover_ob: {fileID: 1496762982827760}
 --- !u!1 &1000011486120510
 GameObject:
   m_ObjectHideFlags: 0
@@ -2056,7 +2040,6 @@ GameObject:
   - component: {fileID: 222904639357099336}
   - component: {fileID: 114843941873921576}
   - component: {fileID: 114554718358071036}
-  - component: {fileID: 2068428648}
   m_Layer: 5
   m_Name: Enemy Wave Text
   m_TagString: Untagged
